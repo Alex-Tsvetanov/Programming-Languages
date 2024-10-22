@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -O0 -o CMakeFiles/lab1_task1.dir/lab1/task1.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/lab1/task1.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/lab1/task1.cpp",
+  "output": "CMakeFiles/lab1_task1.dir/lab1/task1.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/main.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/main.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/main.cpp",
+  "output": "project/CMakeFiles/project.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/enumerable.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/enumerable.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/enumerable.cpp",
+  "output": "project/CMakeFiles/project.dir/enumerable.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/date_time.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/date_time.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/date_time.cpp",
+  "output": "project/CMakeFiles/project.dir/date_time.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/airport.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/airport.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/airport.cpp",
+  "output": "project/CMakeFiles/project.dir/airport.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/flight.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/flight.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/flight.cpp",
+  "output": "project/CMakeFiles/project.dir/flight.cpp.o"
+},
+{
+  "directory": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   -std=gnu++11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -o CMakeFiles/project.dir/plane.cpp.o -c /Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/plane.cpp",
+  "file": "/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/project/plane.cpp",
+  "output": "project/CMakeFiles/project.dir/plane.cpp.o"
+}
+]
