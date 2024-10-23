@@ -1,10 +1,10 @@
 /**
  * @file task2.cpp
  * @author your name (you@domain.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2024-10-09
- * 
+ *
  * @copyright Copyright (c) 2024
  * Задача 2:
  * Създайте клас, който описва обекта работник със следните характеристики: социален
@@ -18,27 +18,35 @@
  *      Задаване и получаване на стойности за член-променливите.
  *      За пресмятане на средно аритметичната стойност от заплатите.
  *      За намиране на минимална заплата.
- * Демонстрирайте функционалността на класа чрез създаване на обект в main(). 
+ * Демонстрирайте функционалността на класа чрез създаване на обект в main().
  */
 
 #include <iostream>
 #include <vector>
-
-class Worker {
-private:
-    long long socId;
-    std::string name;
-    int yearsExp;
-    std::string position;
-    std::vector<Salary> salaries;
-public:
-    Worker()
-    {
-        socId = yearsExp = 0;
-    }
-    Worker(std::string name)
-    {
-        this->name = name;
-        socId = yearsExp = 0;
-    }
+class Salary
+{
 };
+class Worker
+{
+private:
+	long long socId;
+	std::string name;
+	int yearsExp;
+	std::string position;
+	std::vector<Salary> salaries;
+
+public:
+	Worker()
+	{
+		socId = yearsExp = 0;
+	}
+	Worker(std::string name)
+	{
+		this->name = name;
+		socId = yearsExp = 0;
+	}
+};
+
+int main()
+{
+}
