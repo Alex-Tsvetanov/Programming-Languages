@@ -33,6 +33,5 @@ public:
 	double get_average_speed() const;
 
 	friend class AirSpaceManager;
-	friend std::ostream operator<<(std::ostream& out, const Plane& flight);
-	friend std::istream operator>>(std::istream& out, Plane& flight);
+	friend std::ostream& operator<<(std::ostream& out, const Plane& flight);
 };

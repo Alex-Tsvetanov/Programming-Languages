@@ -17,7 +17,19 @@ class AirSpaceManager
 
 	Flight& create_flight(DateTime date_time, double path_length);
 
-	Plane& create_plane();
+	Plane& create_plane(
+		std::string manufacturer,
+		std::string model,
+		unsigned short seats,
+		double min_lane_length,
+		double staff_costs_per_hour,
+		double liters_per_km,
+		double tank_volume,
+		double average_speed);
+
+	void help();
+
+	void search_for_plane();
 
 public:
 	AirSpaceManager();

@@ -28,10 +28,11 @@ public:
 
 	// натовареността на пилотите
 	double exhaust_rate() const;
+	double exhaust_rate(const Plane* _plane) const;
 
 	// продължителността на полетите
 	double flight_duration() const;
 
 	friend class AirSpaceManager;
-	friend std::ostream operator<<(std::ostream& out, const Flight& flight);
+	friend std::ostream& operator<<(std::ostream& out, const Flight& flight);
 };
