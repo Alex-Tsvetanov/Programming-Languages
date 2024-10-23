@@ -35,3 +35,7 @@ double Rectangle::face(double& p) const
 	p = 2 * (w + h);
 	return w * h;
 }
+
+int main()
+{
+}
