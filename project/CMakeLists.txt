@@ -16,5 +16,7 @@ set(Flight flight.cpp flight.hpp)
 
 set(Plane plane.cpp plane.hpp)
 
+set(AirspaceManager airspace_manager.cpp airspace_manager.hpp)
+
 # Adding something we can run - Output name matches target name
-add_executable(project main.cpp ${Enumerable} ${DateTime} ${Airport} ${Flight} ${Plane})
+add_executable(project main.cpp ${AirspaceManager} ${Enumerable} ${DateTime} ${Airport} ${Flight} ${Plane})

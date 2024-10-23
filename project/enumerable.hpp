@@ -7,7 +7,13 @@ class IEnumerable
 	unsigned int id;
 
 public:
-	IEnumerable();
-	inline unsigned int get_id() const;
+	IEnumerable()
+	{
+		id = next_id++;
+	}
+	virtual inline unsigned int get_id() const final
+	{
+		return id;
+	}
 	friend class AirSpaceManager;
 };

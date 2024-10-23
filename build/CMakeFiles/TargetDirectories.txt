@@ -1,6 +1,0 @@
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/CMakeFiles/lab1_task1.dir
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/CMakeFiles/edit_cache.dir
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/CMakeFiles/rebuild_cache.dir
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project/CMakeFiles/project.dir
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project/CMakeFiles/edit_cache.dir
-/Users/alextsvetanov/Documents/GitHub/ProgrammingLanguages/build/project/CMakeFiles/rebuild_cache.dir

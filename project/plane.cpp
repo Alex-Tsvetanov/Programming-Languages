@@ -29,3 +29,21 @@ double Plane::get_average_speed() const
 {
 	return average_speed;
 }
+
+std::ostream& operator<<(std::ostream& out, const Plane& plane)
+{
+	out << "Plane (" << plane.manufacturer << ", " << plane.model << ", " << plane.seats << ", " << plane.min_lane_length
+		<< ", "
+
+		// разходите за необходимия персонал, разход на гориво за 1 километър на едно място
+		<< plane.staff_costs_per_hour << ", " << plane.liters_per_km
+		<< ", "
+
+		// данни за обем на резервоара в литри
+		<< plane.tank_volume
+		<< ", "
+
+		// средната скорост на самолетите от класа
+		<< plane.average_speed << ")";
+	return out;
+}
