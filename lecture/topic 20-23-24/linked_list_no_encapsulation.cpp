@@ -29,37 +29,51 @@ public:
 		old_next->prev = next;
 		return next;
 	}
+
+	operator value_t&()
+	{
+		return value;
+	}
 };
 
 class LinkedList
 {
 private:
-	Node* begin;
-	Node* end;
+	Node* _begin;
+	Node* _end;
 
 public:
-	LinkedList() : begin(nullptr), end(nullptr)
+	LinkedList() : _begin(nullptr), _end(nullptr)
 	{
 	}
 
 	void push_front(value_t val)
 	{
-		if (begin == nullptr)
+		if (_begin == nullptr)
 		{
-			end = begin = new Node(val);
+			_end = _begin = new Node(val);
 			return;
 		}
-		begin = begin->insert_before_this(val);
+		_begin = _begin->insert_before_this(val);
 	}
 
 	void push_back(value_t val)
 	{
-		if (end == nullptr)
+		if (_end == nullptr)
 		{
-			end = begin = new Node(val);
+			_end = _begin = new Node(val);
 			return;
 		}
-		end = end->insert_after_this(val);
+		_end = _end->insert_after_this(val);
+	}
+
+	Node* begin()
+	{
+		return _begin;
+	}
+	Node* end()
+	{
+		return _end;
 	}
 };
 
