@@ -1,30 +1,48 @@
 #include <iostream>
 
-// Класове за различни компоненти на поръчката
-class Burger
+class MenuItem
 {
 public:
+	virtual const char* getName() const = 0;
+};
+
+// Класове за различни компоненти на поръчката
+class Burger : public MenuItem
+{
+public:
+	virtual const char* getName() const
+	{
+		return "Burger";
+	}
 	void prepare() const
 	{
-		std::cout << "Burger is being prepared." << std::endl;
+		std::cout << getName() << " is being prepared." << std::endl;
 	}
 };
 
-class Drink
+class Drink : public MenuItem
 {
 public:
+	virtual const char* getName() const
+	{
+		return "Drink";
+	}
 	void pour() const
 	{
-		std::cout << "Drink is being poured." << std::endl;
+		std::cout << getName() << " is being poured." << std::endl;
 	}
 };
 
-class Fries
+class Fries : public MenuItem
 {
 public:
+	virtual const char* getName() const
+	{
+		return "Fries";
+	}
 	void fry() const
 	{
-		std::cout << "Fries are being fried." << std::endl;
+		std::cout << getName() << " are being fried." << std::endl;
 	}
 };
 
