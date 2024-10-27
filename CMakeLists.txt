@@ -18,4 +18,6 @@ add_executable(lab2_task1 lab2/task1.cpp)
 
 add_executable(lab2_task2 lab2/task2.cpp)
 
+add_subdirectory(lecture)
+
 add_subdirectory(project)
