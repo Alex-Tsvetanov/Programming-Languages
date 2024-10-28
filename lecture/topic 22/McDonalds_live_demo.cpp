@@ -1,5 +1,6 @@
 #include <algorithm>
 #include <iostream>
+#include <vector>
 
 class MenuItem
 {
@@ -50,7 +51,8 @@ public:
 // Кухнята, която отговаря за приготвянето на поръчката
 class Kitchen
 {
-public:
+private:
+	friend class Cashier;
 	// Private методи за подготовка на компонентите - само за приятели
 	void prepareBurger() const
 	{
@@ -72,14 +74,47 @@ public:
 		std::cout << "Kitchen) ";
 		fries.fry();
 	}
-
+public:
 	Kitchen()
 	{
 	}
 
+private:
 	void serve() const
 	{
 		std::cout << "Meal is ready to be served!" << std::endl;
+	}
+};
+
+class Menu
+{
+	static std::vector<const MenuItem*const> items;
+public:
+	static const std::vector<const MenuItem*const >& getItems()
+	{
+		return Menu::items;
+	}
+};
+
+std::vector<const MenuItem*const> Menu::items = {
+	new Burger(),
+	new Drink(),
+	new Fries()
+};
+
+class Menu2
+{
+	std::vector<MenuItem*> items;
+public:
+	Menu2() {
+		items.push_back(new Burger());
+		items.push_back(new Drink());
+		items.push_back(new Fries());
+	}
+	static const std::vector<MenuItem*>& getMenu()
+	{
+		static Menu2 menu;
+		return menu.items;
 	}
 };
 
@@ -101,6 +136,16 @@ public:
 		kitchen.pourDrink();
 		kitchen.fryFries();
 		kitchen.serve();
+	}
+
+	void printMenu()
+	{
+		std::cout << "Menu:\n";
+		const std::vector<const MenuItem* const>& items = Menu::getItems();
+		for (const MenuItem*const item : items)
+		{
+			std::cout << "- " << item->getName() << std::endl;
+		}
 	}
 
 	void makeCustomOrder(bool includeBurger, bool includeDrink, bool includeFries)
@@ -125,8 +170,9 @@ public:
 // Симулиране на процеса на поръчка
 int main()
 {
+
 	Kitchen SerdikaCenter;
-	
+
 	Cashier cashier;
 
 	// Стандартна поръчка
