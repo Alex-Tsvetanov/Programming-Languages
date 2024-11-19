@@ -1,0 +1,84 @@
+@startuml
+
+class Airport {
+    - city : std::string
+    - airport : std::string
+    - location : std::string
+    - lane_lengths : std::vector<double>
+    - fuel_cost_per_liter : double
+    - scheduled_flights : std::vector<Flight*>
+    + get_city() : const std::string&
+    + get_airport() : const std::string&
+    + get_location() : const std::string&
+    + get_lane_lengths() : const std::vector<double>&
+    + get_fuel_cost_per_liter() : double
+    + get_scheduled_flights() : const std::vector<Flight*>&
+}
+
+class AirSpaceManager {
+    - flights : std::vector<Flight*>
+    - planes : std::vector<Plane*>
+    - airports : std::vector<Airport*>
+    + create_airport(city : std::string, airport : std::string, location : std::string, lane_lengths : std::vector<double>, fuel_cost_per_liter : double) : Airport&
+    + create_flight(date_time : DateTime, path_length : double) : Flight&
+    + create_plane(manufacturer : std::string, model : std::string, seats : unsigned short, min_lane_length : double, staff_costs_per_hour : double, liters_per_km : double, tank_volume : double, average_speed : double) : Plane&
+    + input_airport() : void
+    + input_plane() : void
+    + input_flight() : void
+    + run() : void
+}
+
+class DateTime {
+    - hour : unsigned short
+    - minute : unsigned short
+    - second : unsigned short
+    - day : unsigned short
+    - month : unsigned short
+    - year : unsigned short
+    + DateTime() : void
+    + DateTime(year : unsigned short, month : unsigned short, day : unsigned short, hour : unsigned short, minute : unsigned short, second : unsigned short) : void
+}
+
+class Flight {
+    - takeoff_datetime : DateTime
+    - path_length : double
+    - from : const Airport*
+    - to : const Airport*
+    - plane : const Plane*
+    + assign_plane(candidate : const Plane&) : bool
+    + set_from(from : const Airport&) : bool
+    + set_to(to : const Airport&) : bool
+    + exhaust_rate() : double
+    + exhaust_rate(_plane : const Plane*) : double
+    + flight_duration() : double
+}
+
+class Plane {
+    - manufacturer : std::string
+    - model : std::string
+    - seats : unsigned short
+    - min_lane_length : double
+    - staff_costs_per_hour : double
+    - liters_per_km : double
+    - tank_volume : double
+    - average_speed : double
+    + can_land_on(airport : const Airport&) : bool
+    + max_flight_distance() : double
+    + get_average_speed() : double
+}
+
+class IEnumerable {
+    - next_id : static unsigned int
+    - id : unsigned int
+    + get_id() : unsigned int
+}
+
+IEnumerable <|-- Airport
+IEnumerable <|-- Flight
+IEnumerable <|-- Plane
+
+AirSpaceManager *-- Airport
+AirSpaceManager *-- Flight
+AirSpaceManager *-- Plane
+Flight *-- Airport : from/to
+Flight *-- Plane

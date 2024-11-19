@@ -1,3 +1,8 @@
+/**
+ * @file airport.hpp
+ * @brief Contains the declaration of the airport class and its methods.
+ */
+
 #include "project_fwd_def.hpp"
 #include "enumerable.hpp"
 #include <iostream>
