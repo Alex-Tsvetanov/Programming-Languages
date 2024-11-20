@@ -3,7 +3,8 @@
 #include "flight.hpp"
 #include "plane.hpp"
 
-Flight::Flight(DateTime date_time, double _path_length) : IEnumerable(), takeoff_datetime(date_time), path_length(_path_length)
+Flight::Flight(DateTime date_time, double _path_length)
+    : IEnumerable(), takeoff_datetime(date_time), path_length(_path_length)
 {
 }
 
@@ -41,11 +42,7 @@ bool Flight::set_to(const Airport& to)
 	return true;
 }
 
-// натовареността на пилотите
-double Flight::exhaust_rate() const
-{
-	return exhaust_rate(this->plane);
-}
+double Flight::exhaust_rate() const { return exhaust_rate(this->plane); }
 
 double Flight::exhaust_rate(const Plane* _plane) const
 {
@@ -56,7 +53,6 @@ double Flight::exhaust_rate(const Plane* _plane) const
 	return _plane->get_average_speed() * path_length;
 }
 
-// продължителността на полетите
 double Flight::flight_duration() const
 {
 	if (plane == nullptr)
@@ -66,10 +62,24 @@ double Flight::flight_duration() const
 	return path_length / plane->get_average_speed();
 }
 
+double Flight::flight_duration(const Plane* _plane) const
+{
+	if (plane == nullptr)
+	{
+		return std::numeric_limits<double>::quiet_NaN();
+	}
+	return path_length / _plane->get_average_speed();
+}
+
 std::ostream& operator<<(std::ostream& out, const Flight& flight)
 {
-	out << "Flight " << flight.get_id() << " from " << flight.from->get_location() << ", " << flight.from->get_city() << " to " << flight.to->get_location()
-		<< ", " << flight.to->get_city() << " with length of " << flight.path_length << " will take off at " << flight.takeoff_datetime << " local time"
-		<< " by " << *flight.plane << " and will take " << Time::from(flight.flight_duration());
+	out << "Flight " << flight.get_id() << " from " << flight.from->get_location() << ", " << flight.from->get_city()
+	    << " to " << flight.to->get_location() << ", " << flight.to->get_city() << " with length of "
+	    << flight.path_length << " will take off at " << flight.takeoff_datetime << " local time"
+	    << " by ";
+	if (flight.plane)
+		out << *flight.plane << " and will take " << Time::from(flight.flight_duration());
+	else
+		out << "(Unassigned)";
 	return out;
 }

@@ -1,0 +1,32 @@
+new airport
+Sofia
+Terminal 1
+Bulgaria
+1 2 3 4 5
+12
+new airport
+Paris
+Terminal 1
+France
+1 2 3 4 5
+20
+new plane
+Boing
+B123
+123
+3
+10
+2
+10000
+1
+new flight
+25.12.2024 00:00:00
+1000
+1 2
+search_for_plane
+1
+assign_plane
+1
+1
+search_for_plane
+1
