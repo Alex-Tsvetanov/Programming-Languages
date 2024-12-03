@@ -1,0 +1,5 @@
+<map id="Flight::set_from" name="Flight::set_from">
+<area shape="rect" id="node1" title="Sets the origin airport for the flight." alt="" coords="5,5,131,32"/>
+<area shape="rect" id="node2" href="$classPlane.html#ac4a1561f3485506b0bf8f2df4221540c" title="Checks if the plane can land on a given airport." alt="" coords="179,5,325,32"/>
+<area shape="rect" id="node3" href="$classAirport.html#a7cd0fc5ca9c7f123cf3fbdcb290dc6fc" title="Gets the lengths of the lanes at the airport." alt="" coords="373,5,559,32"/>
+</map>

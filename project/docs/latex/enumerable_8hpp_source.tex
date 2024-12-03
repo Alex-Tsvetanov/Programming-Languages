@@ -1,0 +1,54 @@
+\hypertarget{enumerable_8hpp_source}{}\doxysection{enumerable.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file enumerable.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the `IEnumerable` class, which provides a unique identifier for derived objects.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{project__fwd__def_8hpp}{project\_fwd\_def.hpp}}"{}}}
+\DoxyCodeLine{00008 \textcolor{comment}{}}
+\DoxyCodeLine{00009 \textcolor{comment}{/**}}
+\DoxyCodeLine{00010 \textcolor{comment}{ * @class IEnumerable}}
+\DoxyCodeLine{00011 \textcolor{comment}{ * @brief A base class that provides unique IDs for objects. }}
+\DoxyCodeLine{00012 \textcolor{comment}{ * }}
+\DoxyCodeLine{00013 \textcolor{comment}{ * This class is designed to assign a unique identifier to each instance of a derived class.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{enumerable_8hpp_source_l00015}\mbox{\hyperlink{classIEnumerable}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classIEnumerable}{IEnumerable}}}
+\DoxyCodeLine{00016 \{\textcolor{comment}{}}
+\DoxyCodeLine{00017 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00018 \textcolor{comment}{     * @brief Tracks the next available unique ID.}}
+\DoxyCodeLine{00019 \textcolor{comment}{     */}}
+\DoxyCodeLine{00020     \textcolor{keyword}{static} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} next\_id;}
+\DoxyCodeLine{00021 \textcolor{comment}{}}
+\DoxyCodeLine{00022 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00023 \textcolor{comment}{     * @brief The unique ID assigned to the object.}}
+\DoxyCodeLine{00024 \textcolor{comment}{     */}}
+\DoxyCodeLine{00025     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} id;}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Default constructor. Assigns a unique ID to the instance.}}
+\DoxyCodeLine{00030 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{enumerable_8hpp_source_l00031}\mbox{\hyperlink{classIEnumerable_a6cc4c888ac932910fbb43bd3da55b4e2}{00031}}     \mbox{\hyperlink{classIEnumerable_a6cc4c888ac932910fbb43bd3da55b4e2}{IEnumerable}}()}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         \textcolor{keywordtype}{id} = next\_id++;}
+\DoxyCodeLine{00034     \}}
+\DoxyCodeLine{00035 \textcolor{comment}{}}
+\DoxyCodeLine{00036 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @brief Retrieves the unique ID of the instance.}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @return The unique ID of the object.}}
+\DoxyCodeLine{00039 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{enumerable_8hpp_source_l00040}\mbox{\hyperlink{classIEnumerable_a2478df4aca774dca3cd157e1daf30c71}{00040}}     \textcolor{keyword}{virtual} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{classIEnumerable_a2478df4aca774dca3cd157e1daf30c71}{get\_id}}() const final}
+\DoxyCodeLine{00041     \{}
+\DoxyCodeLine{00042         \textcolor{keywordflow}{return} id;}
+\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{00044 \textcolor{comment}{}}
+\DoxyCodeLine{00045 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @brief Declares AirSpaceManager as a friend class, allowing it to access private members.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{enumerable_8hpp_source_l00048}\mbox{\hyperlink{classIEnumerable_a5d3c7b0784e7b261f4f148ad7aa92968}{00048}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}};}
+\DoxyCodeLine{00049 \};}
+
+\end{DoxyCode}

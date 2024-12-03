@@ -1,0 +1,15 @@
+<map id="import_file.hpp" name="import_file.hpp">
+<area shape="rect" id="node1" title="Contains a wrapper for import file." alt="" coords="251,5,371,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,80,79,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="89,155,147,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="591,80,666,107"/>
+<area shape="rect" id="node5" href="$date__time_8hpp.html" title="Contains the declaration of the DateTime and Time classes and their methods for handling date and tim..." alt="" coords="617,155,733,181"/>
+<area shape="rect" id="node8" href="$airport_8hpp.html" title="Contains the declaration of the Airport class and its methods." alt="" coords="265,80,358,107"/>
+<area shape="rect" id="node12" href="$plane_8hpp.html" title="Contains the declaration of the Plane class and its methods." alt="" coords="103,80,189,107"/>
+<area shape="rect" id="node13" href="$flight_8hpp.html" title="Contains the declaration of the Flight class, representing a flight with associated data and operatio..." alt="" coords="434,80,517,107"/>
+<area shape="rect" id="node6" href="$project__fwd__def_8hpp.html" title="Contains the declaration of the project_fwd_def class and its methods." alt="" coords="210,229,362,256"/>
+<area shape="rect" id="node7" title=" " alt="" coords="637,229,713,256"/>
+<area shape="rect" id="node9" href="$enumerable_8hpp.html" title="Contains the declaration of the IEnumerable class, which provides a unique identifier for derived obj..." alt="" coords="222,155,350,181"/>
+<area shape="rect" id="node10" title=" " alt="" coords="462,155,542,181"/>
+<area shape="rect" id="node11" title=" " alt="" coords="375,155,437,181"/>
+</map>

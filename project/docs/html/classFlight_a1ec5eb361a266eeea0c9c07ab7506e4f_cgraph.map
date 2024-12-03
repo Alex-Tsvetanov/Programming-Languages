@@ -1,0 +1,4 @@
+<map id="Flight::exhaust_rate" name="Flight::exhaust_rate">
+<area shape="rect" id="node1" title="Calculates the workload for a given plane during this flight." alt="" coords="5,13,157,39"/>
+<area shape="rect" id="node2" href="$classPlane.html#ae00f9f4578e4453879ca74b3da9b40e7" title="Retrieves the average speed of the plane." alt="" coords="205,5,352,47"/>
+</map>

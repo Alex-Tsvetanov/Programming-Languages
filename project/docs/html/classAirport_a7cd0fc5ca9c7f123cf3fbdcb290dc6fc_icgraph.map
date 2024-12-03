@@ -1,0 +1,7 @@
+<map id="Airport::get_lane_lengths" name="Airport::get_lane_lengths">
+<area shape="rect" id="node1" title="Gets the lengths of the lanes at the airport." alt="" coords="400,56,585,83"/>
+<area shape="rect" id="node2" href="$classPlane.html#ac4a1561f3485506b0bf8f2df4221540c" title="Checks if the plane can land on a given airport." alt="" coords="205,56,352,83"/>
+<area shape="rect" id="node3" href="$classFlight.html#a1b8f0da06df49be2514583f87588a766" title="Assigns a plane to the flight if it meets the necessary criteria." alt="" coords="5,5,157,32"/>
+<area shape="rect" id="node4" href="$classFlight.html#ad9d46aafca0ada76216f2c21a08747c0" title="Sets the origin airport for the flight." alt="" coords="19,56,144,83"/>
+<area shape="rect" id="node5" href="$classFlight.html#aa35e9f029e1fd59ceaecd4f79f16e9f0" title="Sets the destination airport for the flight." alt="" coords="28,107,135,133"/>
+</map>

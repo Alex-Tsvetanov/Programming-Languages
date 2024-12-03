@@ -1,0 +1,96 @@
+\hypertarget{date__time_8hpp_source}{}\doxysection{date\+\_\+time.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file date\_time.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the DateTime and Time classes and their methods for handling date and time}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * information.}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{project__fwd__def_8hpp}{project\_fwd\_def.hpp}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @class DateTime}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @brief Represents a specific point in time with detailed components like year, month, day, hour, minute, and second.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{date__time_8hpp_source_l00015}\mbox{\hyperlink{classDateTime}{00015}} \textcolor{keyword}{class }\mbox{\hyperlink{classDateTime}{DateTime}}}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} hour;    \textcolor{comment}{///< The hour of the time (0-\/23).}}
+\DoxyCodeLine{00018     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} minute;  \textcolor{comment}{///< The minute of the time (0-\/59).}}
+\DoxyCodeLine{00019     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} second;  \textcolor{comment}{///< The second of the time (0-\/59).}}
+\DoxyCodeLine{00020     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} day;     \textcolor{comment}{///< The day of the date (1-\/31).}}
+\DoxyCodeLine{00021     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} month;   \textcolor{comment}{///< The month of the date (1-\/12).}}
+\DoxyCodeLine{00022     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} year;    \textcolor{comment}{///< The year of the date.}}
+\DoxyCodeLine{00023 }
+\DoxyCodeLine{00024 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief Default constructor initializing to an undefined date and time.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028     \mbox{\hyperlink{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}{DateTime}}();}
+\DoxyCodeLine{00029 }
+\DoxyCodeLine{\Hypertarget{date__time_8hpp_source_l00030}\mbox{\hyperlink{classDateTime_a5d3c7b0784e7b261f4f148ad7aa92968}{00030}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}};}
+\DoxyCodeLine{00031 \textcolor{comment}{}}
+\DoxyCodeLine{00032 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00033 \textcolor{comment}{     * @brief Constructs a DateTime object with the specified date and time.}}
+\DoxyCodeLine{00034 \textcolor{comment}{     * @param year The year of the date.}}
+\DoxyCodeLine{00035 \textcolor{comment}{     * @param month The month of the date (1-\/12).}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @param day The day of the date (1-\/31).}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @param hour The hour of the time (0-\/23).}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @param minute The minute of the time (0-\/59).}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @param second The second of the time (0-\/59).}}
+\DoxyCodeLine{00040 \textcolor{comment}{     */}}
+\DoxyCodeLine{00041     \mbox{\hyperlink{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}{DateTime}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} year, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} month, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} day, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} hour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} minute,}
+\DoxyCodeLine{00042              \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} second);}
+\DoxyCodeLine{00043 \textcolor{comment}{}}
+\DoxyCodeLine{00044 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @brief Overloaded output stream operator for DateTime.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param out The output stream.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @param time The DateTime object to be output.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     * @return Reference to the output stream.}}
+\DoxyCodeLine{00049 \textcolor{comment}{     */}}
+\DoxyCodeLine{00050     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classDateTime_a892c37b025152a1d283a0c9f7d2eb9c7}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classDateTime}{DateTime}}\& time);}
+\DoxyCodeLine{00051 \};}
+\DoxyCodeLine{00052 \textcolor{comment}{}}
+\DoxyCodeLine{00053 \textcolor{comment}{/**}}
+\DoxyCodeLine{00054 \textcolor{comment}{ * @class Time}}
+\DoxyCodeLine{00055 \textcolor{comment}{ * @brief Represents a time duration or specific time of day without date information.}}
+\DoxyCodeLine{00056 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{date__time_8hpp_source_l00057}\mbox{\hyperlink{classTime}{00057}} \textcolor{keyword}{class }\mbox{\hyperlink{classTime}{Time}}}
+\DoxyCodeLine{00058 \{}
+\DoxyCodeLine{00059     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} hour;    \textcolor{comment}{///< The hour of the time duration or time of day (0-\/23).}}
+\DoxyCodeLine{00060     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} minute;  \textcolor{comment}{///< The minute of the time duration or time of day (0-\/59).}}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} second;  \textcolor{comment}{///< The second of the time duration or time of day (0-\/59).}}
+\DoxyCodeLine{00062 }
+\DoxyCodeLine{00063 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00064 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * @brief Default constructor initializing to an undefined time.}}
+\DoxyCodeLine{00066 \textcolor{comment}{     */}}
+\DoxyCodeLine{00067     \mbox{\hyperlink{classTime_a4245e409c7347d1d671858962c2ca3b5}{Time}}();}
+\DoxyCodeLine{00068 \textcolor{comment}{}}
+\DoxyCodeLine{00069 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @brief Constructs a Time object with the specified hours, minutes, and seconds.}}
+\DoxyCodeLine{00071 \textcolor{comment}{     * @param hour The hour of the time (0-\/23).}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @param minute The minute of the time (0-\/59).}}
+\DoxyCodeLine{00073 \textcolor{comment}{     * @param second The second of the time (0-\/59).}}
+\DoxyCodeLine{00074 \textcolor{comment}{     */}}
+\DoxyCodeLine{00075     \mbox{\hyperlink{classTime_a4245e409c7347d1d671858962c2ca3b5}{Time}}(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} hour, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} minute, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} second);}
+\DoxyCodeLine{00076 \textcolor{comment}{}}
+\DoxyCodeLine{00077 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @brief Converts a time duration in hours (as a double) to a Time object.}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @param hours The time duration in hours.}}
+\DoxyCodeLine{00080 \textcolor{comment}{     * @return A Time object representing the duration.}}
+\DoxyCodeLine{00081 \textcolor{comment}{     */}}
+\DoxyCodeLine{00082     \textcolor{keyword}{static} \mbox{\hyperlink{classTime}{Time}} \mbox{\hyperlink{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551}{from}}(\textcolor{keywordtype}{double} hours);}
+\DoxyCodeLine{00083 \textcolor{comment}{}}
+\DoxyCodeLine{00084 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @brief Overloaded output stream operator for Time.}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @param out The output stream.}}
+\DoxyCodeLine{00087 \textcolor{comment}{     * @param time The Time object to be output.}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * @return Reference to the output stream.}}
+\DoxyCodeLine{00089 \textcolor{comment}{     */}}
+\DoxyCodeLine{00090     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classTime_acd440d01c2aaa123d528091ba926ccd3}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classTime}{Time}}\& time);}
+\DoxyCodeLine{00091 \};}
+
+\end{DoxyCode}

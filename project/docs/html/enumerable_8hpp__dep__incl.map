@@ -1,0 +1,17 @@
+<map id="enumerable.hpp" name="enumerable.hpp">
+<area shape="rect" id="node1" title="Contains the declaration of the IEnumerable class, which provides a unique identifier for derived obj..." alt="" coords="438,5,566,32"/>
+<area shape="rect" id="node2" href="$airport_8hpp.html" title="Contains the declaration of the Airport class and its methods." alt="" coords="335,80,428,107"/>
+<area shape="rect" id="node12" href="$plane_8cpp.html" title=" " alt="" coords="642,155,727,181"/>
+<area shape="rect" id="node13" href="$enumerable_8cpp.html" title=" " alt="" coords="621,80,748,107"/>
+<area shape="rect" id="node14" href="$flight_8hpp.html" title="Contains the declaration of the Flight class, representing a flight with associated data and operatio..." alt="" coords="203,80,286,107"/>
+<area shape="rect" id="node15" href="$plane_8hpp.html" title="Contains the declaration of the Plane class and its methods." alt="" coords="458,80,545,107"/>
+<area shape="rect" id="node3" href="$airport_8cpp.html" title=" " alt="" coords="173,155,265,181"/>
+<area shape="rect" id="node4" href="$airspace__manager_8hpp.html" title="Contains the declaration of the AirSpaceManager class and its methods for managing airports,..." alt="" coords="236,229,405,256"/>
+<area shape="rect" id="node7" href="$export__file_8hpp.html" title="Contains a wrapper for export file." alt="" coords="448,155,566,181"/>
+<area shape="rect" id="node9" href="$flight_8cpp.html" title=" " alt="" coords="340,155,423,181"/>
+<area shape="rect" id="node10" href="$import__file_8hpp.html" title="Contains a wrapper for import file." alt="" coords="28,155,148,181"/>
+<area shape="rect" id="node5" href="$airspace__manager_8cpp.html" title=" " alt="" coords="542,304,710,331"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title=" " alt="" coords="279,304,362,331"/>
+<area shape="rect" id="node8" href="$export__file_8cpp.html" title=" " alt="" coords="448,229,566,256"/>
+<area shape="rect" id="node11" href="$import__file_8cpp.html" title=" " alt="" coords="29,229,148,256"/>
+</map>

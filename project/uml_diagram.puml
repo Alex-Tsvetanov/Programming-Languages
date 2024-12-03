@@ -19,9 +19,12 @@ class AirSpaceManager {
     - flights : std::vector<Flight*>
     - planes : std::vector<Plane*>
     - airports : std::vector<Airport*>
-    + create_airport(city : std::string, airport : std::string, location : std::string, lane_lengths : std::vector<double>, fuel_cost_per_liter : double) : Airport&
+    + create_airport(city : std::string, airport : std::string, location : std::string, 
+    lane_lengths : std::vector<double>, fuel_cost_per_liter : double) : Airport&
     + create_flight(date_time : DateTime, path_length : double) : Flight&
-    + create_plane(manufacturer : std::string, model : std::string, seats : unsigned short, min_lane_length : double, staff_costs_per_hour : double, liters_per_km : double, tank_volume : double, average_speed : double) : Plane&
+    + create_plane(manufacturer : std::string, model : std::string, seats : unsigned short, 
+    min_lane_length : double, staff_costs_per_hour : double, liters_per_km : double, 
+    tank_volume : double, average_speed : double) : Plane&
     + input_airport() : void
     + input_plane() : void
     + input_flight() : void
@@ -36,7 +39,8 @@ class DateTime {
     - month : unsigned short
     - year : unsigned short
     + DateTime() : void
-    + DateTime(year : unsigned short, month : unsigned short, day : unsigned short, hour : unsigned short, minute : unsigned short, second : unsigned short) : void
+    + DateTime(year : unsigned short, month : unsigned short, day : unsigned short, 
+    hour : unsigned short, minute : unsigned short, second : unsigned short) : void
 }
 
 class Flight {

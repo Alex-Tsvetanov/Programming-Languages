@@ -1,0 +1,6 @@
+<map id="IEnumerable" name="IEnumerable">
+<area shape="rect" id="node1" title="A base class that provides unique IDs for objects." alt="" coords="230,5,359,97"/>
+<area shape="rect" id="node2" href="$classAirport.html" title="Represents an airport with details such as city, name, location, lane lengths, fuel cost,..." alt="" coords="5,153,200,303"/>
+<area shape="rect" id="node3" href="$classFlight.html" title="Represents a flight, including its schedule, route, and assigned plane." alt="" coords="224,145,365,311"/>
+<area shape="rect" id="node4" href="$classPlane.html" title="Represents an aircraft with details for efficient airline management." alt="" coords="389,175,568,281"/>
+</map>

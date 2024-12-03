@@ -1,0 +1,4 @@
+<map id="Time::Time" name="Time::Time">
+<area shape="rect" id="node1" title="Default constructor initializing to an undefined time." alt="" coords="148,5,244,32"/>
+<area shape="rect" id="node2" href="$classTime.html#a3d0a83c8cc29916e8a89cc55dc0f7551" title="Converts a time duration in hours (as a double) to a Time object." alt="" coords="5,5,100,32"/>
+</map>

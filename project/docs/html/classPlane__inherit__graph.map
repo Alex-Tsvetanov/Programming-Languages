@@ -1,0 +1,4 @@
+<map id="Plane" name="Plane">
+<area shape="rect" id="node1" title="Represents an aircraft with details for efficient airline management." alt="" coords="5,145,184,252"/>
+<area shape="rect" id="node2" href="$classIEnumerable.html" title="A base class that provides unique IDs for objects." alt="" coords="30,5,159,97"/>
+</map>

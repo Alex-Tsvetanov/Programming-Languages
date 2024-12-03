@@ -1,0 +1,110 @@
+\hypertarget{classDateTime}{}\doxysection{Date\+Time Class Reference}
+\label{classDateTime}\index{DateTime@{DateTime}}
+
+
+Represents a specific point in time with detailed components like year, month, day, hour, minute, and second.  
+
+
+
+
+{\ttfamily \#include $<$date\+\_\+time.\+hpp$>$}
+
+
+
+Collaboration diagram for Date\+Time\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classDateTime__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}{Date\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing to an undefined date and time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDateTime_a919a556a61e6728c4131309bf7d13fc4}{Date\+Time}} (unsigned short year, unsigned short month, unsigned short day, unsigned short hour, unsigned short minute, unsigned short second)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classDateTime}{Date\+Time}} object with the specified date and time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classDateTime_a5d3c7b0784e7b261f4f148ad7aa92968}{Air\+Space\+Manager}}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classDateTime_a892c37b025152a1d283a0c9f7d2eb9c7}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&time)
+\begin{DoxyCompactList}\small\item\em Overloaded output stream operator for \mbox{\hyperlink{classDateTime}{Date\+Time}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a specific point in time with detailed components like year, month, day, hour, minute, and second. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}\label{classDateTime_a3ccfb87f7a2e9683b91964e32d907161}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializing to an undefined date and time. 
+
+\mbox{\Hypertarget{classDateTime_a919a556a61e6728c4131309bf7d13fc4}\label{classDateTime_a919a556a61e6728c4131309bf7d13fc4}} 
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{unsigned short}]{year,  }\item[{unsigned short}]{month,  }\item[{unsigned short}]{day,  }\item[{unsigned short}]{hour,  }\item[{unsigned short}]{minute,  }\item[{unsigned short}]{second }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classDateTime}{Date\+Time}} object with the specified date and time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The year of the date. \\
+\hline
+{\em month} & The month of the date (1-\/12). \\
+\hline
+{\em day} & The day of the date (1-\/31). \\
+\hline
+{\em hour} & The hour of the time (0-\/23). \\
+\hline
+{\em minute} & The minute of the time (0-\/59). \\
+\hline
+{\em second} & The second of the time (0-\/59). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classDateTime_a5d3c7b0784e7b261f4f148ad7aa92968}\label{classDateTime_a5d3c7b0784e7b261f4f148ad7aa92968}} 
+\index{DateTime@{DateTime}!AirSpaceManager@{AirSpaceManager}}
+\index{AirSpaceManager@{AirSpaceManager}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{AirSpaceManager}{AirSpaceManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classAirSpaceManager}{Air\+Space\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classDateTime_a892c37b025152a1d283a0c9f7d2eb9c7}\label{classDateTime_a892c37b025152a1d283a0c9f7d2eb9c7}} 
+\index{DateTime@{DateTime}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classDateTime}{Date\+Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded output stream operator for \mbox{\hyperlink{classDateTime}{Date\+Time}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+{\em time} & The \mbox{\hyperlink{classDateTime}{Date\+Time}} object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{date__time_8hpp}{date\+\_\+time.\+hpp}}\item 
+\mbox{\hyperlink{date__time_8cpp}{date\+\_\+time.\+cpp}}\end{DoxyCompactItemize}
