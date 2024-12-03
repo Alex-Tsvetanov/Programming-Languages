@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classIEnumerable.html" title="A base class that provides unique IDs for objects." alt="" coords="5,56,109,83"/>
+<area shape="rect" id="node2" href="$classAirport.html" title="Represents an airport with details such as city, name, location, lane lengths, fuel cost,..." alt="" coords="157,5,224,32"/>
+<area shape="rect" id="node3" href="$classFlight.html" title="Represents a flight, including its schedule, route, and assigned plane." alt="" coords="161,56,220,83"/>
+<area shape="rect" id="node4" href="$classPlane.html" title="Represents an aircraft with details for efficient airline management." alt="" coords="161,107,220,133"/>
+</map>

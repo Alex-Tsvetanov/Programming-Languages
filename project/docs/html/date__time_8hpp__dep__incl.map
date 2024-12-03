@@ -1,0 +1,14 @@
+<map id="date_time.hpp" name="date_time.hpp">
+<area shape="rect" id="node1" title="Contains the declaration of the DateTime and Time classes and their methods for handling date and tim..." alt="" coords="271,5,387,32"/>
+<area shape="rect" id="node2" href="$airport_8cpp.html" title=" " alt="" coords="200,155,292,181"/>
+<area shape="rect" id="node3" href="$airspace__manager_8hpp.html" title="Contains the declaration of the AirSpaceManager class and its methods for managing airports,..." alt="" coords="161,229,331,256"/>
+<area shape="rect" id="node6" href="$date__time_8cpp.html" title=" " alt="" coords="495,80,610,107"/>
+<area shape="rect" id="node7" href="$export__file_8hpp.html" title="Contains a wrapper for export file." alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node9" href="$flight_8cpp.html" title=" " alt="" coords="511,155,594,181"/>
+<area shape="rect" id="node10" href="$flight_8hpp.html" title="Contains the declaration of the Flight class, representing a flight with associated data and operatio..." alt="" coords="287,80,370,107"/>
+<area shape="rect" id="node11" href="$import__file_8hpp.html" title="Contains a wrapper for import file." alt="" coords="367,155,487,181"/>
+<area shape="rect" id="node4" href="$airspace__manager_8cpp.html" title=" " alt="" coords="87,304,255,331"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="279,304,362,331"/>
+<area shape="rect" id="node8" href="$export__file_8cpp.html" title=" " alt="" coords="5,229,124,256"/>
+<area shape="rect" id="node12" href="$import__file_8cpp.html" title=" " alt="" coords="368,229,487,256"/>
+</map>

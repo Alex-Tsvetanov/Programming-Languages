@@ -1,0 +1,105 @@
+\hypertarget{plane_8hpp_source}{}\doxysection{plane.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file plane.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the Plane class and its methods.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{project__fwd__def_8hpp}{project\_fwd\_def.hpp}}"{}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{enumerable_8hpp}{enumerable.hpp}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00010 \textcolor{comment}{}}
+\DoxyCodeLine{00011 \textcolor{comment}{/**}}
+\DoxyCodeLine{00012 \textcolor{comment}{ * @class Plane}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @brief Represents an aircraft with details for efficient airline management.}}
+\DoxyCodeLine{00014 \textcolor{comment}{ *}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * The Plane class encapsulates data about the manufacturer, model, seating capacity,}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * minimum runway length, operational costs, fuel consumption, tank volume, and average speed.}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{plane_8hpp_source_l00018}\mbox{\hyperlink{classPlane}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classPlane}{Plane}} : \textcolor{keyword}{public} \mbox{\hyperlink{classIEnumerable}{IEnumerable}}}
+\DoxyCodeLine{00019 \{\textcolor{comment}{}}
+\DoxyCodeLine{00020 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00021 \textcolor{comment}{     * @brief Manufacturer of the plane.}}
+\DoxyCodeLine{00022 \textcolor{comment}{     */}}
+\DoxyCodeLine{00023     std::string manufacturer;}
+\DoxyCodeLine{00024 \textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief Model of the plane.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028     std::string model;}
+\DoxyCodeLine{00029 \textcolor{comment}{}}
+\DoxyCodeLine{00030 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @brief Number of seats in the plane.}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} seats;}
+\DoxyCodeLine{00034 \textcolor{comment}{}}
+\DoxyCodeLine{00035 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief Minimum runway length required for takeoff and landing.}}
+\DoxyCodeLine{00037 \textcolor{comment}{     */}}
+\DoxyCodeLine{00038     \textcolor{keywordtype}{double} min\_lane\_length;}
+\DoxyCodeLine{00039 \textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief Staff costs per hour for operating the plane.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{00043     \textcolor{keywordtype}{double} staff\_costs\_per\_hour;}
+\DoxyCodeLine{00044 \textcolor{comment}{}}
+\DoxyCodeLine{00045 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @brief Fuel consumption in liters per kilometer per seat.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{double} liters\_per\_km;}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Maximum fuel tank volume in liters.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     */}}
+\DoxyCodeLine{00053     \textcolor{keywordtype}{double} tank\_volume;}
+\DoxyCodeLine{00054 \textcolor{comment}{}}
+\DoxyCodeLine{00055 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @brief Average speed of the plane in kilometers per hour.}}
+\DoxyCodeLine{00057 \textcolor{comment}{     */}}
+\DoxyCodeLine{00058     \textcolor{keywordtype}{double} average\_speed;}
+\DoxyCodeLine{00059 \textcolor{comment}{}}
+\DoxyCodeLine{00060 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00061 \textcolor{comment}{     * @brief Private default constructor.}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * Used internally for specific purposes.}}
+\DoxyCodeLine{00063 \textcolor{comment}{     */}}
+\DoxyCodeLine{00064     \mbox{\hyperlink{classPlane}{Plane}}();}
+\DoxyCodeLine{00065 }
+\DoxyCodeLine{00066 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00067 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @brief Checks if the plane can land on a given airport.}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @param airport The airport to check compatibility with.}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @return True if the plane can land, false otherwise.}}
+\DoxyCodeLine{00071 \textcolor{comment}{     */}}
+\DoxyCodeLine{00072     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classPlane_ac4a1561f3485506b0bf8f2df4221540c}{can\_land\_on}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}\& airport) \textcolor{keyword}{const};}
+\DoxyCodeLine{00073 \textcolor{comment}{}}
+\DoxyCodeLine{00074 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00075 \textcolor{comment}{     * @brief Calculates the maximum flight distance for the plane.}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * @return The maximum distance the plane can travel in kilometers.}}
+\DoxyCodeLine{00077 \textcolor{comment}{     */}}
+\DoxyCodeLine{00078     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPlane_a399c13253b4ddfe4ff92371f7940d6c5}{max\_flight\_distance}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00079 \textcolor{comment}{}}
+\DoxyCodeLine{00080 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @brief Retrieves the average speed of the plane.}}
+\DoxyCodeLine{00082 \textcolor{comment}{     * @return The average speed in kilometers per hour.}}
+\DoxyCodeLine{00083 \textcolor{comment}{     */}}
+\DoxyCodeLine{00084     \textcolor{keywordtype}{double} \mbox{\hyperlink{classPlane_ae00f9f4578e4453879ca74b3da9b40e7}{get\_average\_speed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00085 \textcolor{comment}{}}
+\DoxyCodeLine{00086 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00087 \textcolor{comment}{     * @brief Overloaded output stream operator for Plane.}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * Outputs the details of the plane to the provided stream.}}
+\DoxyCodeLine{00089 \textcolor{comment}{     * @param out The output stream.}}
+\DoxyCodeLine{00090 \textcolor{comment}{     * @param plane The plane object to be output.}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @return Reference to the output stream.}}
+\DoxyCodeLine{00092 \textcolor{comment}{     */}}
+\DoxyCodeLine{00093     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classPlane_a22d945ceb15ddd9a348bf57339dfaec5}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classPlane}{Plane}}\& plane);}
+\DoxyCodeLine{00094 \textcolor{comment}{}}
+\DoxyCodeLine{00095 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00096 \textcolor{comment}{     * @brief Declares AirSpaceManager as a friend class.}}
+\DoxyCodeLine{00097 \textcolor{comment}{     * Allows access to the private and protected members of Plane.}}
+\DoxyCodeLine{00098 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{plane_8hpp_source_l00099}\mbox{\hyperlink{classPlane_a5d3c7b0784e7b261f4f148ad7aa92968}{00099}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}};}
+\DoxyCodeLine{00100 \};}
+
+\end{DoxyCode}

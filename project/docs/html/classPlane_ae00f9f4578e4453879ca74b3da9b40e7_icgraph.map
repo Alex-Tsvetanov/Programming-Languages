@@ -1,0 +1,5 @@
+<map id="Plane::get_average_speed" name="Plane::get_average_speed">
+<area shape="rect" id="node1" title="Retrieves the average speed of the plane." alt="" coords="215,23,361,65"/>
+<area shape="rect" id="node2" href="$classFlight.html#a1ec5eb361a266eeea0c9c07ab7506e4f" title="Calculates the workload for a given plane during this flight." alt="" coords="10,5,162,32"/>
+<area shape="rect" id="node3" href="$classFlight.html#afb96ffd14920aa5c623b6655080e5255" title="Calculates the flight duration based on the route length and plane speed." alt="" coords="5,56,167,83"/>
+</map>

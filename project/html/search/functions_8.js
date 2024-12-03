@@ -1,4 +1,0 @@
-var searchData=
-[
-  ['operator_3c_3c_94',['operator&lt;&lt;',['../airport_8cpp.html#ac777cadb7702c62351ffd6bbe0cb4ccd',1,'operator&lt;&lt;(std::ostream &amp;out, const Airport &amp;airport):&#160;airport.cpp'],['../date__time_8cpp.html#a892c37b025152a1d283a0c9f7d2eb9c7',1,'operator&lt;&lt;(std::ostream &amp;out, const DateTime &amp;time):&#160;date_time.cpp'],['../date__time_8cpp.html#acd440d01c2aaa123d528091ba926ccd3',1,'operator&lt;&lt;(std::ostream &amp;out, const Time &amp;time):&#160;date_time.cpp'],['../flight_8cpp.html#a05cc7a4b13b91dfd9c40b255e70e5c53',1,'operator&lt;&lt;(std::ostream &amp;out, const Flight &amp;flight):&#160;flight.cpp'],['../plane_8cpp.html#a22d945ceb15ddd9a348bf57339dfaec5',1,'operator&lt;&lt;(std::ostream &amp;out, const Plane &amp;plane):&#160;plane.cpp']]]
-];

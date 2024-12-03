@@ -1,0 +1,144 @@
+\hypertarget{classTime}{}\doxysection{Time Class Reference}
+\label{classTime}\index{Time@{Time}}
+
+
+Represents a time duration or specific time of day without date information.  
+
+
+
+
+{\ttfamily \#include $<$date\+\_\+time.\+hpp$>$}
+
+
+
+Collaboration diagram for Time\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{classTime__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTime_a4245e409c7347d1d671858962c2ca3b5}{Time}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing to an undefined time. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTime_a1503775638e673001904f6b366b84025}{Time}} (unsigned short hour, unsigned short minute, unsigned short second)
+\begin{DoxyCompactList}\small\item\em Constructs a \mbox{\hyperlink{classTime}{Time}} object with the specified hours, minutes, and seconds. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classTime}{Time}} \mbox{\hyperlink{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551}{from}} (double hours)
+\begin{DoxyCompactList}\small\item\em Converts a time duration in hours (as a double) to a \mbox{\hyperlink{classTime}{Time}} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classTime_acd440d01c2aaa123d528091ba926ccd3}{operator$<$$<$}} (std\+::ostream \&out, const \mbox{\hyperlink{classTime}{Time}} \&time)
+\begin{DoxyCompactList}\small\item\em Overloaded output stream operator for \mbox{\hyperlink{classTime}{Time}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a time duration or specific time of day without date information. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classTime_a4245e409c7347d1d671858962c2ca3b5}\label{classTime_a4245e409c7347d1d671858962c2ca3b5}} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor initializing to an undefined time. 
+
+
+
+Referenced by \mbox{\hyperlink{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551}{from()}}.
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classTime_a4245e409c7347d1d671858962c2ca3b5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classTime_a1503775638e673001904f6b366b84025}\label{classTime_a1503775638e673001904f6b366b84025}} 
+\index{Time@{Time}!Time@{Time}}
+\index{Time@{Time}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Time\+::\+Time (\begin{DoxyParamCaption}\item[{unsigned short}]{hour,  }\item[{unsigned short}]{minute,  }\item[{unsigned short}]{second }\end{DoxyParamCaption})}
+
+
+
+Constructs a \mbox{\hyperlink{classTime}{Time}} object with the specified hours, minutes, and seconds. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hour} & The hour of the time (0-\/23). \\
+\hline
+{\em minute} & The minute of the time (0-\/59). \\
+\hline
+{\em second} & The second of the time (0-\/59). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551}\label{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551}} 
+\index{Time@{Time}!from@{from}}
+\index{from@{from}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{from()}{from()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classTime}{Time}} Time\+::from (\begin{DoxyParamCaption}\item[{double}]{hours }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Converts a time duration in hours (as a double) to a \mbox{\hyperlink{classTime}{Time}} object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hours} & The time duration in hours. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A \mbox{\hyperlink{classTime}{Time}} object representing the duration. 
+\end{DoxyReturn}
+
+
+References \mbox{\hyperlink{classTime_a4245e409c7347d1d671858962c2ca3b5}{Time()}}.
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classTime_a3d0a83c8cc29916e8a89cc55dc0f7551_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classTime_acd440d01c2aaa123d528091ba926ccd3}\label{classTime_acd440d01c2aaa123d528091ba926ccd3}} 
+\index{Time@{Time}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Time@{Time}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{out,  }\item[{const \mbox{\hyperlink{classTime}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Overloaded output stream operator for \mbox{\hyperlink{classTime}{Time}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & The output stream. \\
+\hline
+{\em time} & The \mbox{\hyperlink{classTime}{Time}} object to be output. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reference to the output stream. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{date__time_8hpp}{date\+\_\+time.\+hpp}}\item 
+\mbox{\hyperlink{date__time_8cpp}{date\+\_\+time.\+cpp}}\end{DoxyCompactItemize}

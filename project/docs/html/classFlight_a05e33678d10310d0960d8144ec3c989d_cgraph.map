@@ -1,0 +1,4 @@
+<map id="Flight::flight_duration" name="Flight::flight_duration">
+<area shape="rect" id="node1" title="Calculates the flight duration based on the route length and plane speed." alt="" coords="5,13,167,39"/>
+<area shape="rect" id="node2" href="$classPlane.html#ae00f9f4578e4453879ca74b3da9b40e7" title="Retrieves the average speed of the plane." alt="" coords="215,5,361,47"/>
+</map>

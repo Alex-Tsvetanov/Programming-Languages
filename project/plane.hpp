@@ -87,10 +87,10 @@ public:
      * @brief Overloaded output stream operator for Plane.
      * Outputs the details of the plane to the provided stream.
      * @param out The output stream.
-     * @param flight The plane object to be output.
+     * @param plane The plane object to be output.
      * @return Reference to the output stream.
      */
-    friend std::ostream& operator<<(std::ostream& out, const Plane& flight);
+    friend std::ostream& operator<<(std::ostream& out, const Plane& plane);
 
     /**
      * @brief Declares AirSpaceManager as a friend class.

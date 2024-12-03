@@ -1,0 +1,123 @@
+\hypertarget{airport_8hpp_source}{}\doxysection{airport.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file airport.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the Airport class and its methods.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{project__fwd__def_8hpp}{project\_fwd\_def.hpp}}"{}}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{enumerable_8hpp}{enumerable.hpp}}"{}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00011 \textcolor{comment}{}}
+\DoxyCodeLine{00012 \textcolor{comment}{/**}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @class Airport}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Represents an airport with details such as city, name, location, lane lengths, fuel cost, and scheduled flights.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ * }}
+\DoxyCodeLine{00016 \textcolor{comment}{ * This class provides methods to access airport-\/related information and handles its associated data.}}
+\DoxyCodeLine{00017 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{airport_8hpp_source_l00018}\mbox{\hyperlink{classAirport}{00018}} \textcolor{keyword}{class }\mbox{\hyperlink{classAirport}{Airport}} : \textcolor{keyword}{public} \mbox{\hyperlink{classIEnumerable}{IEnumerable}}}
+\DoxyCodeLine{00019 \{\textcolor{comment}{}}
+\DoxyCodeLine{00020 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00021 \textcolor{comment}{     * @brief The city where the airport is located.}}
+\DoxyCodeLine{00022 \textcolor{comment}{     */}}
+\DoxyCodeLine{00023     std::string city;}
+\DoxyCodeLine{00024 \textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief The name of the airport.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028     std::string airport;}
+\DoxyCodeLine{00029 \textcolor{comment}{}}
+\DoxyCodeLine{00030 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @brief The geographical location of the airport.}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     std::string location;}
+\DoxyCodeLine{00034 \textcolor{comment}{}}
+\DoxyCodeLine{00035 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief The lengths of the lanes available at the airport.}}
+\DoxyCodeLine{00037 \textcolor{comment}{     */}}
+\DoxyCodeLine{00038     std::vector<double> lane\_lengths;}
+\DoxyCodeLine{00039 \textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief The cost of fuel per liter at the airport.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     */}}
+\DoxyCodeLine{00043     \textcolor{keywordtype}{double} fuel\_cost\_per\_liter;}
+\DoxyCodeLine{00044 \textcolor{comment}{}}
+\DoxyCodeLine{00045 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @brief The list of scheduled flights at the airport.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{00048     std::vector<Flight*> scheduled\_flights;}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Constructs an Airport object with detailed information.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * }}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @param city The city where the airport is located.}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @param airport The name of the airport.}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @param location The geographical location of the airport.}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @param lane\_lengths The lengths of the lanes available at the airport.}}
+\DoxyCodeLine{00057 \textcolor{comment}{     * @param fuel\_cost\_per\_liter The cost of fuel per liter at the airport.}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @param scheduled\_flights The list of scheduled flights.}}
+\DoxyCodeLine{00059 \textcolor{comment}{     */}}
+\DoxyCodeLine{00060     \mbox{\hyperlink{classAirport}{Airport}}(}
+\DoxyCodeLine{00061         std::string city,}
+\DoxyCodeLine{00062         std::string airport,}
+\DoxyCodeLine{00063         std::string location,}
+\DoxyCodeLine{00064         std::vector<double> lane\_lengths,}
+\DoxyCodeLine{00065         \textcolor{keywordtype}{double} fuel\_cost\_per\_liter,}
+\DoxyCodeLine{00066         \textcolor{keyword}{const} std::vector<Flight*>\& scheduled\_flights);}
+\DoxyCodeLine{00067 }
+\DoxyCodeLine{00068 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00069 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @brief Gets the city where the airport is located.}}
+\DoxyCodeLine{00071 \textcolor{comment}{     * @return A constant reference to the city name.}}
+\DoxyCodeLine{00072 \textcolor{comment}{     */}}
+\DoxyCodeLine{00073     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classAirport_af8e1a66ec81f3ac1d20ee026e0d46ebc}{get\_city}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00074 \textcolor{comment}{}}
+\DoxyCodeLine{00075 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * @brief Gets the name of the airport.}}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @return A constant reference to the airport name.}}
+\DoxyCodeLine{00078 \textcolor{comment}{     */}}
+\DoxyCodeLine{00079     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classAirport_a29a1653ef91bf890d4b48c5b3324ed55}{get\_airport}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00080 \textcolor{comment}{}}
+\DoxyCodeLine{00081 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00082 \textcolor{comment}{     * @brief Gets the geographical location of the airport.}}
+\DoxyCodeLine{00083 \textcolor{comment}{     * @return A constant reference to the location.}}
+\DoxyCodeLine{00084 \textcolor{comment}{     */}}
+\DoxyCodeLine{00085     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classAirport_a9d934ca5aff023232e3e01bd1ddf9135}{get\_location}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00086 \textcolor{comment}{}}
+\DoxyCodeLine{00087 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00088 \textcolor{comment}{     * @brief Gets the lengths of the lanes at the airport.}}
+\DoxyCodeLine{00089 \textcolor{comment}{     * @return A constant reference to a vector containing the lane lengths.}}
+\DoxyCodeLine{00090 \textcolor{comment}{     */}}
+\DoxyCodeLine{00091     \textcolor{keyword}{const} std::vector<double>\& \mbox{\hyperlink{classAirport_a7cd0fc5ca9c7f123cf3fbdcb290dc6fc}{get\_lane\_lengths}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00092 \textcolor{comment}{}}
+\DoxyCodeLine{00093 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00094 \textcolor{comment}{     * @brief Gets the cost of fuel per liter at the airport.}}
+\DoxyCodeLine{00095 \textcolor{comment}{     * @return The fuel cost per liter.}}
+\DoxyCodeLine{00096 \textcolor{comment}{     */}}
+\DoxyCodeLine{00097     \textcolor{keywordtype}{double} \mbox{\hyperlink{classAirport_a25ca30049ad512da7665b54d95c5ea5e}{get\_fuel\_cost\_per\_liter}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00098 \textcolor{comment}{}}
+\DoxyCodeLine{00099 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00100 \textcolor{comment}{     * @brief Gets the list of scheduled flights at the airport.}}
+\DoxyCodeLine{00101 \textcolor{comment}{     * @return A constant reference to a vector of pointers to Flight objects.}}
+\DoxyCodeLine{00102 \textcolor{comment}{     */}}
+\DoxyCodeLine{00103     \textcolor{keyword}{const} std::vector<Flight*>\& \mbox{\hyperlink{classAirport_a148a32e9984b784c23fd80d38a1935d2}{get\_scheduled\_flights}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00104 \textcolor{comment}{}}
+\DoxyCodeLine{00105 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00106 \textcolor{comment}{     * @brief Allows AirSpaceManager to access private members of the Airport class.}}
+\DoxyCodeLine{00107 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{airport_8hpp_source_l00108}\mbox{\hyperlink{classAirport_a5d3c7b0784e7b261f4f148ad7aa92968}{00108}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}};}
+\DoxyCodeLine{00109 \textcolor{comment}{}}
+\DoxyCodeLine{00110 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00111 \textcolor{comment}{     * @brief Outputs the details of the Airport object to an output stream.}}
+\DoxyCodeLine{00112 \textcolor{comment}{     * }}
+\DoxyCodeLine{00113 \textcolor{comment}{     * @param out The output stream to write to.}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * @param airport The Airport object to output.}}
+\DoxyCodeLine{00115 \textcolor{comment}{     * @return A reference to the output stream.}}
+\DoxyCodeLine{00116 \textcolor{comment}{     */}}
+\DoxyCodeLine{00117     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classAirport_ac777cadb7702c62351ffd6bbe0cb4ccd}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}\& airport);}
+\DoxyCodeLine{00118 \};}
+
+\end{DoxyCode}

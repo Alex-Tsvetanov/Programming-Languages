@@ -1,0 +1,4 @@
+<map id="Plane::can_land_on" name="Plane::can_land_on">
+<area shape="rect" id="node1" title="Checks if the plane can land on a given airport." alt="" coords="5,5,152,32"/>
+<area shape="rect" id="node2" href="$classAirport.html#a7cd0fc5ca9c7f123cf3fbdcb290dc6fc" title="Gets the lengths of the lanes at the airport." alt="" coords="200,5,385,32"/>
+</map>

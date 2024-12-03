@@ -1,0 +1,100 @@
+\hypertarget{flight_8hpp_source}{}\doxysection{flight.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file flight.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the Flight class, representing a flight with associated data and operations.}}
+\DoxyCodeLine{00004 \textcolor{comment}{ */}}
+\DoxyCodeLine{00005 }
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{project__fwd__def_8hpp}{project\_fwd\_def.hpp}}"{}}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{date__time_8hpp}{date\_time.hpp}}"{}}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{enumerable_8hpp}{enumerable.hpp}}"{}}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00011 \textcolor{comment}{}}
+\DoxyCodeLine{00012 \textcolor{comment}{/**}}
+\DoxyCodeLine{00013 \textcolor{comment}{ * @class Flight}}
+\DoxyCodeLine{00014 \textcolor{comment}{ * @brief Represents a flight, including its schedule, route, and assigned plane.}}
+\DoxyCodeLine{00015 \textcolor{comment}{ *}}
+\DoxyCodeLine{00016 \textcolor{comment}{ * The Flight class encapsulates details about a specific flight, such as the takeoff time,}}
+\DoxyCodeLine{00017 \textcolor{comment}{ * route length, origin and destination airports, and the plane assigned to the flight.}}
+\DoxyCodeLine{00018 \textcolor{comment}{ * It also provides methods to calculate workload and flight duration.}}
+\DoxyCodeLine{00019 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{flight_8hpp_source_l00020}\mbox{\hyperlink{classFlight}{00020}} \textcolor{keyword}{class }\mbox{\hyperlink{classFlight}{Flight}} : \textcolor{keyword}{public} \mbox{\hyperlink{classIEnumerable}{IEnumerable}}}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     \mbox{\hyperlink{classDateTime}{DateTime}} takeoff\_datetime;  \textcolor{comment}{///< The scheduled takeoff date and time.}}
+\DoxyCodeLine{00023     \textcolor{keywordtype}{double} path\_length;         \textcolor{comment}{///< The length of the flight route in kilometers.}}
+\DoxyCodeLine{00024     \textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}* from;        \textcolor{comment}{///< The origin airport of the flight.}}
+\DoxyCodeLine{00025     \textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}* to;          \textcolor{comment}{///< The destination airport of the flight.}}
+\DoxyCodeLine{00026     \textcolor{keyword}{const} \mbox{\hyperlink{classPlane}{Plane}}* plane;         \textcolor{comment}{///< The plane assigned to execute the flight.}}
+\DoxyCodeLine{00027 \textcolor{comment}{}}
+\DoxyCodeLine{00028 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00029 \textcolor{comment}{     * @brief Constructs a Flight object with the given date/time and route length.}}
+\DoxyCodeLine{00030 \textcolor{comment}{     * @param date\_time The takeoff date and time.}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @param \_path\_length The length of the flight route in kilometers.}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     \mbox{\hyperlink{classFlight}{Flight}}(\mbox{\hyperlink{classDateTime}{DateTime}} date\_time, \textcolor{keywordtype}{double} \_path\_length);}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00036 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00037 \textcolor{comment}{     * @brief Assigns a plane to the flight if it meets the necessary criteria.}}
+\DoxyCodeLine{00038 \textcolor{comment}{     * @param candidate The plane to be considered for assignment.}}
+\DoxyCodeLine{00039 \textcolor{comment}{     * @return True if the plane was successfully assigned, false otherwise.}}
+\DoxyCodeLine{00040 \textcolor{comment}{     */}}
+\DoxyCodeLine{00041     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFlight_a1b8f0da06df49be2514583f87588a766}{assign\_plane}}(\textcolor{keyword}{const} \mbox{\hyperlink{classPlane}{Plane}}\& candidate);}
+\DoxyCodeLine{00042 \textcolor{comment}{}}
+\DoxyCodeLine{00043 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * @brief Sets the origin airport for the flight.}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @param from The airport object representing the flight's origin.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @return True if the origin was set successfully, false otherwise.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     */}}
+\DoxyCodeLine{00048     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFlight_ad9d46aafca0ada76216f2c21a08747c0}{set\_from}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}\& from);}
+\DoxyCodeLine{00049 \textcolor{comment}{}}
+\DoxyCodeLine{00050 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00051 \textcolor{comment}{     * @brief Sets the destination airport for the flight.}}
+\DoxyCodeLine{00052 \textcolor{comment}{     * @param to The airport object representing the flight's destination.}}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @return True if the destination was set successfully, false otherwise.}}
+\DoxyCodeLine{00054 \textcolor{comment}{     */}}
+\DoxyCodeLine{00055     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classFlight_aa35e9f029e1fd59ceaecd4f79f16e9f0}{set\_to}}(\textcolor{keyword}{const} \mbox{\hyperlink{classAirport}{Airport}}\& to);}
+\DoxyCodeLine{00056 \textcolor{comment}{}}
+\DoxyCodeLine{00057 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00058 \textcolor{comment}{     * @brief Calculates the workload for the pilot(s) during this flight.}}
+\DoxyCodeLine{00059 \textcolor{comment}{     * @return The workload as a percentage.}}
+\DoxyCodeLine{00060 \textcolor{comment}{     */}}
+\DoxyCodeLine{00061     \textcolor{keywordtype}{double} \mbox{\hyperlink{classFlight_a797d2404e46984569c4a06bd9c3b586a}{exhaust\_rate}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00062 \textcolor{comment}{}}
+\DoxyCodeLine{00063 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @brief Calculates the workload for a given plane during this flight.}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * @param \_plane The plane to evaluate.}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @return The workload as a percentage for the specified plane.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     */}}
+\DoxyCodeLine{00068     \textcolor{keywordtype}{double} \mbox{\hyperlink{classFlight_a797d2404e46984569c4a06bd9c3b586a}{exhaust\_rate}}(\textcolor{keyword}{const} \mbox{\hyperlink{classPlane}{Plane}}* \_plane) \textcolor{keyword}{const};}
+\DoxyCodeLine{00069 \textcolor{comment}{}}
+\DoxyCodeLine{00070 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00071 \textcolor{comment}{     * @brief Calculates the flight duration based on the route length and plane speed.}}
+\DoxyCodeLine{00072 \textcolor{comment}{     * @return The flight duration in hours.}}
+\DoxyCodeLine{00073 \textcolor{comment}{     */}}
+\DoxyCodeLine{00074     \textcolor{keywordtype}{double} \mbox{\hyperlink{classFlight_afb96ffd14920aa5c623b6655080e5255}{flight\_duration}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{00075 \textcolor{comment}{}}
+\DoxyCodeLine{00076 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00077 \textcolor{comment}{     * @brief Calculates the flight duration based on the route length and plane speed.}}
+\DoxyCodeLine{00078 \textcolor{comment}{     * @param \_plane The plane to evaluate.}}
+\DoxyCodeLine{00079 \textcolor{comment}{     * @return The flight duration with the given plane in hours.}}
+\DoxyCodeLine{00080 \textcolor{comment}{     */}}
+\DoxyCodeLine{00081     \textcolor{keywordtype}{double} \mbox{\hyperlink{classFlight_afb96ffd14920aa5c623b6655080e5255}{flight\_duration}}(\textcolor{keyword}{const} \mbox{\hyperlink{classPlane}{Plane}}*) \textcolor{keyword}{const};}
+\DoxyCodeLine{00082 \textcolor{comment}{}}
+\DoxyCodeLine{00083 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00084 \textcolor{comment}{     * @brief Overloaded output stream operator for Flight.}}
+\DoxyCodeLine{00085 \textcolor{comment}{     * @param out The output stream.}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @param flight The Flight object to be output.}}
+\DoxyCodeLine{00087 \textcolor{comment}{     * @return Reference to the output stream.}}
+\DoxyCodeLine{00088 \textcolor{comment}{     */}}
+\DoxyCodeLine{00089     \textcolor{keyword}{friend} std::ostream\& \mbox{\hyperlink{classFlight_a05cc7a4b13b91dfd9c40b255e70e5c53}{operator<<}}(std::ostream\& out, \textcolor{keyword}{const} \mbox{\hyperlink{classFlight}{Flight}}\& flight);}
+\DoxyCodeLine{00090 \textcolor{comment}{}}
+\DoxyCodeLine{00091 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00092 \textcolor{comment}{     * @brief Declares AirSpaceManager as a friend class to access private members.}}
+\DoxyCodeLine{00093 \textcolor{comment}{     */}}
+\DoxyCodeLine{\Hypertarget{flight_8hpp_source_l00094}\mbox{\hyperlink{classFlight_a5d3c7b0784e7b261f4f148ad7aa92968}{00094}}     \textcolor{keyword}{friend} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}};}
+\DoxyCodeLine{00095 \};}
+
+\end{DoxyCode}

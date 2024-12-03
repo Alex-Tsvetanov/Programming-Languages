@@ -1,0 +1,137 @@
+\hypertarget{airspace__manager_8hpp_source}{}\doxysection{airspace\+\_\+manager.\+hpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{comment}{/**}}
+\DoxyCodeLine{00002 \textcolor{comment}{ * @file airspace\_manager.hpp}}
+\DoxyCodeLine{00003 \textcolor{comment}{ * @brief Contains the declaration of the AirSpaceManager class and its methods for managing airports, planes, and}}
+\DoxyCodeLine{00004 \textcolor{comment}{ * flights.}}
+\DoxyCodeLine{00005 \textcolor{comment}{ */}}
+\DoxyCodeLine{00006 }
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{date__time_8hpp}{date\_time.hpp}}"{}}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{airport_8hpp}{airport.hpp}}"{}}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{plane_8hpp}{plane.hpp}}"{}}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{flight_8hpp}{flight.hpp}}"{}}}
+\DoxyCodeLine{00016 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{export__file_8hpp}{export\_file.hpp}}"{}}}
+\DoxyCodeLine{00017 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{import__file_8hpp}{import\_file.hpp}}"{}}}
+\DoxyCodeLine{00018 \textcolor{comment}{}}
+\DoxyCodeLine{00019 \textcolor{comment}{/**}}
+\DoxyCodeLine{00020 \textcolor{comment}{ * @class AirSpaceManager}}
+\DoxyCodeLine{00021 \textcolor{comment}{ * @brief A class to manage airports, planes, and flights for optimizing airline resources.}}
+\DoxyCodeLine{00022 \textcolor{comment}{ */}}
+\DoxyCodeLine{\Hypertarget{airspace__manager_8hpp_source_l00023}\mbox{\hyperlink{classAirSpaceManager}{00023}} \textcolor{keyword}{class }\mbox{\hyperlink{classAirSpaceManager}{AirSpaceManager}}}
+\DoxyCodeLine{00024 \{\textcolor{comment}{}}
+\DoxyCodeLine{00025 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00026 \textcolor{comment}{     * @brief A list of all flights managed by the application.}}
+\DoxyCodeLine{00027 \textcolor{comment}{     */}}
+\DoxyCodeLine{00028     std::vector<Flight*> flights;}
+\DoxyCodeLine{00029 \textcolor{comment}{}}
+\DoxyCodeLine{00030 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00031 \textcolor{comment}{     * @brief A list of all planes managed by the application.}}
+\DoxyCodeLine{00032 \textcolor{comment}{     */}}
+\DoxyCodeLine{00033     std::vector<Plane*> planes;}
+\DoxyCodeLine{00034 \textcolor{comment}{}}
+\DoxyCodeLine{00035 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00036 \textcolor{comment}{     * @brief A list of all airports managed by the application.}}
+\DoxyCodeLine{00037 \textcolor{comment}{     */}}
+\DoxyCodeLine{00038     std::vector<Airport*> airports;}
+\DoxyCodeLine{00039 \textcolor{comment}{}}
+\DoxyCodeLine{00040 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00041 \textcolor{comment}{     * @brief Creates a new airport and adds it to the managed list.}}
+\DoxyCodeLine{00042 \textcolor{comment}{     * @param city The city where the airport is located.}}
+\DoxyCodeLine{00043 \textcolor{comment}{     * @param airport The name of the airport.}}
+\DoxyCodeLine{00044 \textcolor{comment}{     * @param location The location of the airport.}}
+\DoxyCodeLine{00045 \textcolor{comment}{     * @param lane\_lengths The lengths of the runways available at the airport.}}
+\DoxyCodeLine{00046 \textcolor{comment}{     * @param fuel\_cost\_per\_liter The cost of fuel per liter at the airport.}}
+\DoxyCodeLine{00047 \textcolor{comment}{     * @return Reference to the newly created airport.}}
+\DoxyCodeLine{00048 \textcolor{comment}{     */}}
+\DoxyCodeLine{00049     \mbox{\hyperlink{classAirport}{Airport}}\& create\_airport(std::string city, std::string airport, std::string location,}
+\DoxyCodeLine{00050                             std::vector<double> lane\_lengths, \textcolor{keywordtype}{double} fuel\_cost\_per\_liter);}
+\DoxyCodeLine{00051 \textcolor{comment}{}}
+\DoxyCodeLine{00052 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00053 \textcolor{comment}{     * @brief Creates a new flight and adds it to the managed list.}}
+\DoxyCodeLine{00054 \textcolor{comment}{     * @param date\_time The departure date and time of the flight.}}
+\DoxyCodeLine{00055 \textcolor{comment}{     * @param path\_length The length of the flight path in kilometers.}}
+\DoxyCodeLine{00056 \textcolor{comment}{     * @return Reference to the newly created flight.}}
+\DoxyCodeLine{00057 \textcolor{comment}{     */}}
+\DoxyCodeLine{00058     \mbox{\hyperlink{classFlight}{Flight}}\& create\_flight(\mbox{\hyperlink{classDateTime}{DateTime}} date\_time, \textcolor{keywordtype}{double} path\_length);}
+\DoxyCodeLine{00059 \textcolor{comment}{}}
+\DoxyCodeLine{00060 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00061 \textcolor{comment}{     * @brief Creates a new plane and adds it to the managed list.}}
+\DoxyCodeLine{00062 \textcolor{comment}{     * @param manufacturer The manufacturer of the plane.}}
+\DoxyCodeLine{00063 \textcolor{comment}{     * @param model The model of the plane.}}
+\DoxyCodeLine{00064 \textcolor{comment}{     * @param seats The number of seats available on the plane.}}
+\DoxyCodeLine{00065 \textcolor{comment}{     * @param min\_lane\_length The minimum runway length required for the plane.}}
+\DoxyCodeLine{00066 \textcolor{comment}{     * @param staff\_costs\_per\_hour The hourly cost of the plane's staff.}}
+\DoxyCodeLine{00067 \textcolor{comment}{     * @param liters\_per\_km Fuel consumption in liters per kilometer per seat.}}
+\DoxyCodeLine{00068 \textcolor{comment}{     * @param tank\_volume The fuel tank volume in liters.}}
+\DoxyCodeLine{00069 \textcolor{comment}{     * @param average\_speed The average speed of the plane in km/h.}}
+\DoxyCodeLine{00070 \textcolor{comment}{     * @return Reference to the newly created plane.}}
+\DoxyCodeLine{00071 \textcolor{comment}{     */}}
+\DoxyCodeLine{00072     \mbox{\hyperlink{classPlane}{Plane}}\& create\_plane(std::string manufacturer, std::string model, \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} seats, \textcolor{keywordtype}{double} min\_lane\_length,}
+\DoxyCodeLine{00073                         \textcolor{keywordtype}{double} staff\_costs\_per\_hour, \textcolor{keywordtype}{double} liters\_per\_km, \textcolor{keywordtype}{double} tank\_volume, \textcolor{keywordtype}{double} average\_speed);}
+\DoxyCodeLine{00074 \textcolor{comment}{}}
+\DoxyCodeLine{00075 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00076 \textcolor{comment}{     * @brief Displays help information about using the application.}}
+\DoxyCodeLine{00077 \textcolor{comment}{     */}}
+\DoxyCodeLine{00078     \textcolor{keywordtype}{void} help();}
+\DoxyCodeLine{00079 \textcolor{comment}{}}
+\DoxyCodeLine{00080 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00081 \textcolor{comment}{     * @brief Searches for planes compatible with a specific destination.}}
+\DoxyCodeLine{00082 \textcolor{comment}{     */}}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{void} search\_for\_plane();}
+\DoxyCodeLine{00084 \textcolor{comment}{}}
+\DoxyCodeLine{00085 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00086 \textcolor{comment}{     * @brief Assigns a plane to a given flight.}}
+\DoxyCodeLine{00087 \textcolor{comment}{     */}}
+\DoxyCodeLine{00088     \textcolor{keywordtype}{void} assign\_plane();}
+\DoxyCodeLine{00089 \textcolor{comment}{}}
+\DoxyCodeLine{00090 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00091 \textcolor{comment}{     * @brief Reads all the information about the airspace from an inputed file}}
+\DoxyCodeLine{00092 \textcolor{comment}{     *}}
+\DoxyCodeLine{00093 \textcolor{comment}{     */}}
+\DoxyCodeLine{00094     \textcolor{keywordtype}{void} read();}
+\DoxyCodeLine{00095 \textcolor{comment}{}}
+\DoxyCodeLine{00096 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00097 \textcolor{comment}{     * @brief Writes all the information about the airspace to an inputed file}}
+\DoxyCodeLine{00098 \textcolor{comment}{     *}}
+\DoxyCodeLine{00099 \textcolor{comment}{     */}}
+\DoxyCodeLine{00100     \textcolor{keywordtype}{void} write();}
+\DoxyCodeLine{00101 }
+\DoxyCodeLine{00102 \textcolor{keyword}{public}:\textcolor{comment}{}}
+\DoxyCodeLine{00103 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00104 \textcolor{comment}{     * @brief Default constructor for AirSpaceManager.}}
+\DoxyCodeLine{00105 \textcolor{comment}{     */}}
+\DoxyCodeLine{00106     \mbox{\hyperlink{classAirSpaceManager_ac31329fc7270a67ba2ddd242b27c2992}{AirSpaceManager}}();}
+\DoxyCodeLine{00107 \textcolor{comment}{}}
+\DoxyCodeLine{00108 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00109 \textcolor{comment}{     * @brief Destructor for AirSpaceManager. Frees allocated memory.}}
+\DoxyCodeLine{00110 \textcolor{comment}{     */}}
+\DoxyCodeLine{00111     \mbox{\hyperlink{classAirSpaceManager_a1c97ccd5d5762b740f3114cc11dd1a50}{\string~AirSpaceManager}}();}
+\DoxyCodeLine{00112 \textcolor{comment}{}}
+\DoxyCodeLine{00113 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00114 \textcolor{comment}{     * @brief Prompts the user to input details for a new airport.}}
+\DoxyCodeLine{00115 \textcolor{comment}{     */}}
+\DoxyCodeLine{00116     \textcolor{keywordtype}{void} \mbox{\hyperlink{classAirSpaceManager_a0156793cb3a9492c743c9cf1b587d51e}{input\_airport}}();}
+\DoxyCodeLine{00117 \textcolor{comment}{}}
+\DoxyCodeLine{00118 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00119 \textcolor{comment}{     * @brief Prompts the user to input details for a new plane.}}
+\DoxyCodeLine{00120 \textcolor{comment}{     */}}
+\DoxyCodeLine{00121     \textcolor{keywordtype}{void} \mbox{\hyperlink{classAirSpaceManager_afbef4def616b54eb0362d796ab3ff9dc}{input\_plane}}();}
+\DoxyCodeLine{00122 \textcolor{comment}{}}
+\DoxyCodeLine{00123 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00124 \textcolor{comment}{     * @brief Prompts the user to input details for a new flight.}}
+\DoxyCodeLine{00125 \textcolor{comment}{     */}}
+\DoxyCodeLine{00126     \textcolor{keywordtype}{void} \mbox{\hyperlink{classAirSpaceManager_a3b30454d6c8aae1e8480ae95fc704353}{input\_flight}}();}
+\DoxyCodeLine{00127 \textcolor{comment}{}}
+\DoxyCodeLine{00128 \textcolor{comment}{    /**}}
+\DoxyCodeLine{00129 \textcolor{comment}{     * @brief Main entry point to run the AirSpaceManager application.}}
+\DoxyCodeLine{00130 \textcolor{comment}{     */}}
+\DoxyCodeLine{00131     \textcolor{keywordtype}{void} \mbox{\hyperlink{classAirSpaceManager_ae1f8dfe7a285874a4516c4ada7c58f12}{run}}();}
+\DoxyCodeLine{00132 \};}
+
+\end{DoxyCode}

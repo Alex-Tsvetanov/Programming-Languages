@@ -1,12 +1,125 @@
-EXTRACT_ALL          = YES
-CLASS_DIAGRAMS      = YES
-HIDE_UNDOC_RELATIONS = NO
-HAVE_DOT             = YES
-CLASS_GRAPH          = YES
-COLLABORATION_GRAPH  = YES
-UML_LOOK             = YES
-UML_LIMIT_NUM_FIELDS = 50
-TEMPLATE_RELATIONS   = YES
-DOT_GRAPH_MAX_NODES  = 100
-MAX_DOT_GRAPH_DEPTH  = 0
-DOT_TRANSPARENT      = YES
+# Doxyfile 1.9.3
+
+# Project information
+PROJECT_NAME           = "Course project in Programming Languages"
+PROJECT_NUMBER         = "1.0"
+PROJECT_BRIEF          = "Developed by Alex Ivanov Tsvetanov, 38th group, KSE, FKST, №121222225"
+OUTPUT_DIRECTORY       = ./docs
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = English
+
+# Input configuration
+INPUT                  = ./
+FILE_PATTERNS          = *.c *.cc *.cpp *.cxx *.h *.hpp *.hxx
+EXCLUDE_PATTERNS       = *.py
+RECURSIVE              = YES
+EXCLUDE_SYMLINKS       = NO
+
+# Build configuration
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_ANON_NSPACES   = YES
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+HIDE_UNDOC_RELATIONS   = NO
+HAVE_DOT               = YES
+DOT_NUM_THREADS        = 4
+
+# Graphical Output
+CLASS_DIAGRAMS         = YES
+COLLABORATION_GRAPH    = YES
+INCLUDE_GRAPH          = YES
+INCLUDED_BY_GRAPH      = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
+GRAPHICAL_HIERARCHY    = YES
+DIRECTORY_GRAPH        = YES
+
+# Dot Tool Configuration
+DOT_FONTNAME           = Helvetica
+DOT_FONTSIZE           = 10
+DOT_FONTPATH           =
+CLASS_GRAPH            = YES
+TEMPLATE_RELATIONS     = YES
+HAVE_DOT               = YES
+DOT_GRAPH_MAX_NODES    = 100
+MAX_DOT_GRAPH_DEPTH    = 0
+DOT_TRANSPARENT        = YES
+DOT_MULTI_TARGETS      = YES
+GENERATE_LEGEND        = YES
+
+# UML Configuration
+UML_LOOK               = YES
+UML_LIMIT_NUM_FIELDS   = 50
+
+# HTML Output
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+HTML_FILE_EXTENSION    = .html
+HTML_COLORSTYLE_HUE    = 220
+HTML_COLORSTYLE_SAT    = 100
+HTML_COLORSTYLE_GAMMA  = 80
+HTML_DYNAMIC_MENUS     = YES
+HTML_DYNAMIC_SECTIONS  = YES
+HTML_EXTRA_STYLESHEET  =
+HTML_EXTRA_FILES       =
+HTML_INDEX_NUM_ENTRIES = 100
+GENERATE_TREEVIEW      = YES
+TREEVIEW_WIDTH         = 250
+FORMULA_FONTSIZE       = 10
+
+# LaTeX Output
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+LATEX_CMD_NAME         = xelatex
+MAKEINDEX_CMD_NAME     = makeindex
+COMPACT_LATEX          = NO
+PAPER_TYPE             = a4wide
+EXTRA_PACKAGES         =
+LATEX_HEADER           = # latex_header.tex
+LATEX_FOOTER           =
+LATEX_EXTRA_FILES      = # latex_header.tex
+PDF_HYPERLINKS         = YES
+USE_PDFLATEX           = YES
+LATEX_BATCHMODE        = NO
+LATEX_HIDE_INDICES     = NO
+LATEX_SOURCE_CODE      = YES
+
+# Additional configurations
+GENERATE_MAN           = NO
+GENERATE_XML           = NO
+GENERATE_DOCBOOK       = NO
+GENERATE_AUTOGEN_DEF   = NO
+GENERATE_PERLMOD       = NO
+ALPHABETICAL_INDEX     = YES
+OPTIMIZE_OUTPUT_FOR_C  = YES
+OPTIMIZE_OUTPUT_JAVA   = NO
+OPTIMIZE_FOR_FORTRAN   = NO
+OPTIMIZE_OUTPUT_VHDL   = NO
+EXTENSION_MAPPING      =
+MARKDOWN_SUPPORT       = YES
+AUTOLINK_SUPPORT       = YES
+TAB_SIZE               = 4
+SHOW_INCLUDE_FILES     = YES
+SHOW_USED_FILES        = YES
+QT_AUTOBRIEF           = YES
+MULTILINE_CPP_IS_BRIEF = NO
+INLINE_SIMPLE_STRUCTS  = YES
+FULL_PATH_NAMES        = YES
+STRIP_FROM_PATH        =
+STRIP_FROM_INC_PATH    =
+STRIP_CODE_COMMENTS    = NO
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+VERBATIM_HEADERS       = YES
+
+# Examples and diagrams
+EXAMPLE_PATH           =
+EXAMPLE_PATTERNS       =
+EXAMPLE_RECURSIVE      = NO
+DOT_IMAGE_FORMAT       = png
+DOT_CLEANUP            = YES
+PLANTUML_JAR_PATH      =
+PLANTUML_CFG_FILE      =
